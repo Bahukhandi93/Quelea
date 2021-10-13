@@ -104,8 +104,7 @@ public class OpenLyricsWriter {
     public void writeToFile(File xfile, boolean overwrite)
             throws OpenLyricsWriterFileExistsException,
                    OpenLyricsWriterWriteErrorException,
-                   TransformerConfigurationException,
-                   TransformerException {
+                   TransformerException { //                                                                      Removed TransformerConfigurationException 
         if (!overwrite && xfile.exists()) {
             throw new OpenLyricsWriterFileExistsException(String.format("The file %s exists.", xfile.getAbsolutePath()));
         }
